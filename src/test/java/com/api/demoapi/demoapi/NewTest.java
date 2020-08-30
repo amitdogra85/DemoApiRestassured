@@ -4,11 +4,10 @@ import org.testng.annotations.*;
 import org.testng.annotations.BeforeTest;
 
 public class NewTest {
-  @Test
-  public void f() {
-  }
-  @BeforeTest
+ 
+  @BeforeSuite
   public void beforeTest() {
+	  System.out.println("Amit Dogra Before Test");
   }
 
 }

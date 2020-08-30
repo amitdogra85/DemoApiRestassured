@@ -2,12 +2,16 @@ package com.api.demoapi.demoapi;
 
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import junit.framework.Assert;
 
 public class AppTest2 {
 
+	//Verify the response Header
 	@Test
 	public void GetWeatherDetails()
 	{   
@@ -25,8 +29,17 @@ public class AppTest2 {
 
 		// Now let us print the body of the message to see what response
 		// we have recieved from the server
-		String responseBody = response.getBody().asString();
-		System.out.println("Response Body is =>  " + responseBody);
+		String header1 = response.getHeader("content-type");
+		System.out.println("Response Body is =>  " + header1);
+		Assert.assertEquals("application/json; charset=utf-8", header1);
+		
+		Headers allHeaders = response.headers();
+		 
+		 // Iterate over all the Headers
+		 for(Header header : allHeaders)
+		 {
+		 System.out.println("Key: " + header.getName() + " Value: " + header.getValue());
+		 }
 
 	}
 

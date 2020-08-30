@@ -5,4 +5,10 @@
       <class name="com.api.demoapi.demoapi.AppTest"/>
     </classes>
   </test>
+  <test name="Simple Test2">
+    <classes>
+      <class name="com.api.demoapi.demoapi.AppTest2"/>
+      <class name="com.api.demoapi.demoapi.NewTest"/>
+    </classes>
+  </test>
 </suite>

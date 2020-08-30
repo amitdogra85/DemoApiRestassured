@@ -5,6 +5,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import junit.framework.Assert;
 
 public class AppTest {
 
@@ -25,8 +26,10 @@ public class AppTest {
 
 		// Now let us print the body of the message to see what response
 		// we have recieved from the server
-		String responseBody = response.getBody().asString();
-		System.out.println("Response Body is =>  " + responseBody);
+		int statusCode = response.getStatusCode();
+		System.out.println("Response Body is =>  " + statusCode);
+		Assert.assertEquals(200, statusCode);
+		
 
 	}
 

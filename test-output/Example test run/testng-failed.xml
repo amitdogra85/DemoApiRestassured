@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Example test run]">
-  <test name="Simple Test(failed)">
+  <test name="Simple Test2(failed)">
     <classes>
-      <class name="com.api.demoapi.demoapi.AppTest">
+      <class name="com.api.demoapi.demoapi.AppTest2">
         <methods>
           <include name="GetWeatherDetails"/>
         </methods>
-      </class> <!-- com.api.demoapi.demoapi.AppTest -->
+      </class> <!-- com.api.demoapi.demoapi.AppTest2 -->
     </classes>
-  </test> <!-- Simple Test(failed) -->
+  </test> <!-- Simple Test2(failed) -->
 </suite> <!-- Failed suite [Example test run] -->
